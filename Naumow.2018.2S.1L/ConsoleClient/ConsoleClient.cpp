@@ -9,13 +9,17 @@
 using namespace matrix; 
 using namespace std;
 
-
 int main()
 {
 	int size; 
-	cout << "enter the number of elements in the source array";
 	cin >> size; 
-	int* Array = new int[size];
+	int *arr = AllocateMemory(size); 
+	InitArray(arr, size);
+	DisplayArray(arr, size);
+	std::cout << "\n\n"; 
+	BubleSort(arr, size);
+	FreeMemory(arr);
+	cin >> size; 
     return 0;
 }
 

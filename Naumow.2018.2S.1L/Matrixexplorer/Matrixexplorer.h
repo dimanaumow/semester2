@@ -1,11 +1,20 @@
 #pragma once
 
-#ifdef MATRIXEXPLORER_EXPORTS
-#define MATRIXEXPLORER_API __declspec(dllexport) 
+#ifdef Matrixexplorer_EXPORTS
+#define Matrixexplorer_API __declspec(dllexport) 
 #else
-#define MATRIXEXPLORER_API __declspec(dllimport) 
+#define Matrixexplorer_API __declspec(dllimport) 
 #endif
+
 namespace matrix
 {
-	MATRIXEXPLORER_API void Filing(int n, int[]);
+	Matrixexplorer_API int* AllocateMemory(int size);
+	Matrixexplorer_API void InitArray(int* arr, int size);
+	Matrixexplorer_API void DisplayArray(int* arr, int size);
+	Matrixexplorer_API int  SearchMax(int* arr, int size);
+	Matrixexplorer_API int  SizeToArrayB(int* arr, int size);
+	Matrixexplorer_API void InitArrayB(int* arr, int size, int* arrb, int sizeB);
+	Matrixexplorer_API void PopElement(int* arr,int &size, int pos);
+	Matrixexplorer_API void BubleSort(int* arr, int n);
+	Matrixexplorer_API void FreeMemory(int* const arr);
 }
